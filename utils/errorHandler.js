@@ -1,11 +1,11 @@
- const ErrorHandler=(err,_req,res,next)=>{
-    const status = err.status || 500;
-    const message = err.message || 'Internal Server Error!';
+const ErrorHandler = (err, _req, res, next) => {
+  const status = err.status || 500;
+  const message = err.message || "Internal Server Error!";
 
-    res.status(status).json({
-        success:false,
-        message:message
-    })
-}
+  res.status(status).json({
+    success: false,
+    message: message,
+  });
+};
 
-module.exports = ErrorHandler
+module.exports = ErrorHandler;
